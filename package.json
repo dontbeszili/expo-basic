@@ -1,7 +1,7 @@
 {
   "name": "rn-prep",
   "version": "1.0.0",
-  "main": "expo/AppEntry.js",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -17,14 +17,17 @@
   },
   "dependencies": {
     "expo": "~51.0.24",
+    "expo-router": "^3.5.20",
     "expo-status-bar": "~1.12.1",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
-    "react-native": "0.74.3"
+    "react-native": "0.74.3",
+    "react-native-svg": "^15.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
+    "babel-plugin-module-resolver": "^5.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.0.0",
@@ -33,7 +36,7 @@
     "husky": "^9.1.4",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.1.3"
+    "typescript": "~5.3.3"
   },
   "private": true,
   "config": {
