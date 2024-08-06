@@ -16,12 +16,15 @@
     "format:write": "prettier src --write --config .prettierrc"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.2",
     "expo": "~51.0.24",
     "expo-router": "^3.5.20",
     "expo-status-bar": "~1.12.1",
+    "expo-web-browser": "~13.0.3",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
-    "react-native": "0.74.3"
+    "react-native": "0.74.3",
+    "react-native-reanimated": "~3.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
