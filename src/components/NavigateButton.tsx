@@ -7,10 +7,10 @@ export default function NavigateButton(props) {
   return (
     <Link href={href} asChild>
       <Pressable
-        className='lex items-center justify-center py-3 px-8 rounded-full shadow-md bg-black'
+        className='items-center justify-center py-3 px-8 rounded-xl shadow-md bg-white w-full	'
         onPress={onPress}
       >
-        <Text className='text-lg leading-5 font-bold tracking-wide text-white'>
+        <Text className='text-lg leading-5 font-bold tracking-wide text-bcr'>
           {title}
         </Text>
       </Pressable>
