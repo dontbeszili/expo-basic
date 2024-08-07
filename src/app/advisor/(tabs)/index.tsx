@@ -1,6 +1,4 @@
 import { Image, View, Text } from "react-native";
-
-// import { HelloWave } from '@/src/components/HelloWave';
 import ParallaxScrollView from "@/src/components/ParallaxScrollView";
 import { StatusBar } from "expo-status-bar";
 
