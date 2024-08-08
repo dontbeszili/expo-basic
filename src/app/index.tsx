@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import { Image, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import NavigateButton from "../components/NavigateButton";
 import GeorgeLogo from "@/assets/svgs/george-logo.svg";
 import ConfettiSvg from "@/assets/svgs/confetti.svg";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -15,8 +16,15 @@ export default function HomeScreen() {
         concepts and does not represent actual for final UX, functionality of
         user flows
       </Text>
-      <View className="mb-10 flex items-center">
-        <Text className='text-3xl font-bold text-bcr-primary mb-4'>RM view</Text>
+      <Link href='/developer' asChild>
+        <Pressable>
+          <Text className="underline">Developer</Text>
+        </Pressable>
+      </Link>
+      <View className='mb-10 flex items-center'>
+        <Text className='text-3xl font-bold text-bcr-primary mb-4'>
+          RM view
+        </Text>
         <View className='flex-row items-center justify-center'>
           <Image
             source={require("@/assets/images/rm-user.png")}

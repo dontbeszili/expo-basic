@@ -2,10 +2,10 @@
   "expo": {
     "name": "rn-prep",
     "slug": "rn-prep",
+    "scheme": "rn-prep",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/bcr.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/bcr.png",
@@ -22,7 +22,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/bcr.png"
+      "favicon": "./assets/bcr.png",
+      "bundler": "metro"
     },
     "plugins": ["expo-router"],
     "experiments": {
