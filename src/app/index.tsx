@@ -4,8 +4,13 @@ import NavigateButton from "../components/NavigateButton";
 import GeorgeLogo from "@/assets/svgs/george-logo.svg";
 import ConfettiSvg from "@/assets/svgs/confetti.svg";
 import { Link } from "expo-router";
+import { useAppSelector } from "../store/hooks";
 
 export default function HomeScreen() {
+  const uid = useAppSelector((state) => state.user.uid);
+  const userName = useAppSelector((state) => state.user.name);
+  const role = useAppSelector((state) => state.user.role);
+
   return (
     <View className='container mx-auto px-5 flex-1 justify-end items-center bg-bcr '>
       <ConfettiSvg className='h-[178px] w-[290px] top-0 left-0 absolute' />
@@ -18,28 +23,31 @@ export default function HomeScreen() {
       </Text>
       <Link href='/developer' asChild>
         <Pressable>
-          <Text className="underline">Developer</Text>
+          <Text className='underline'>Developer</Text>
         </Pressable>
       </Link>
-      <View className='mb-10 flex items-center'>
-        <Text className='text-3xl font-bold text-bcr-primary mb-4'>
-          RM view
-        </Text>
-        <View className='flex-row items-center justify-center'>
-          <Image
-            source={require("@/assets/images/rm-user.png")}
-            className='h-[54px] w-[54px] mr-4'
-          />
-          <View>
-            <Text className='text-base text-bcr-primary font-medium'>
-              Gabriela Petrescu
-            </Text>
-            <Text className='text-base text-bcr-primary font-medium'>
-              Relationship Manager
-            </Text>
+      {uid && (
+        <View className='mb-10 flex items-center'>
+          <Text className='text-3xl font-bold text-bcr-primary mb-4'>
+            RM view
+          </Text>
+          <View className='flex-row items-center justify-center'>
+            <Image
+              source={require("@/assets/images/rm-user.png")}
+              className='h-[54px] w-[54px] mr-4'
+            />
+            <View>
+              <Text className='text-base text-bcr-primary font-medium'>
+                {userName}
+              </Text>
+              <Text className='text-base text-bcr-primary font-medium'>
+                {role}
+              </Text>
+            </View>
           </View>
         </View>
-      </View>
+      )}
+      {!uid && <View className="mb-16 pb-16"></View>}
       <Text className='text-base text-bcr-primary text-center mb-10'>
         Tap ot to click to start, and hold down two fingers on screen to restart
         at any point

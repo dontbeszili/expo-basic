@@ -12,7 +12,7 @@ export default function DeveloperScreen() {
 
   return (
     <View className='container mx-auto px-5 flex-1 items-center bg-bcr'>
-      <NavigateButton title='Roles Demo' href='/developer/roles' />
+      <NavigateButton title='Users Demo' href='/developer/users' />
       <NavigateButton title='Test Demo' href='/developer/test' />
     </View>
   );
